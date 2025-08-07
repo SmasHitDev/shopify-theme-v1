@@ -34,7 +34,7 @@ export function Aside({
 }) {
   const {type: activeType, close} = useAside();
   const expanded = type === activeType;
-
+  console.log("pipppo");
   useEffect(() => {
     const abortController = new AbortController();
 
