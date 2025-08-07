@@ -3,9 +3,16 @@ import {hydrogen} from '@shopify/hydrogen/vite';
 import {oxygen} from '@shopify/mini-oxygen/vite';
 import {reactRouter} from '@react-router/dev/vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
+import {vanillaExtractPlugin} from '@vanilla-extract/vite-plugin';
 
 export default defineConfig({
-  plugins: [hydrogen(), oxygen(), reactRouter(), tsconfigPaths()],
+  plugins: [
+    vanillaExtractPlugin(),
+    hydrogen(),
+    oxygen(),
+    reactRouter(),
+    tsconfigPaths(),
+  ],
   build: {
     // Allow a strict Content-Security-Policy
     // withtout inlining assets as base64:
